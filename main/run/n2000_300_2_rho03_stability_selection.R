@@ -223,11 +223,7 @@ simulation<-function(runs_i){
     }
     
     m <- c(rep(1,q),rep(1,mfunctions),m_fun)
-    usedf<-fun_Eigval[[1]]
-    for (usedf_i in 2:mfunctions) {
-      usedf<-c(usedf,fun_Eigval[[m_i]])
-    }
-    usedf <-c(rep(1,q),rep(1,mfunctions),usedf)
+    
     designmatrix<-all_designmatrix
     for (tau_j in 1:length(tau_all)) {
       ##############################################################
